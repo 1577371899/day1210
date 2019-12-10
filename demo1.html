@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+    h1{
+        color:brown;
+    }
+    </style>
+    请输入内容：<input type="text" oninput="input_change(this)"/> //绑定方法
+    <h1>{{message}</h1>
+    <h2></h2>
+    <script>
+        //javascript实现
+        var x=1
+       function input_change(input){
+           console.log(++x)
+           //将input的值赋给h1的innerHTML属性,queySelector方法的入参和jquery类似
+           var h1 = document.querySelector("h1");
+           h1.innerHTML = input.value
+           var h2 = document.querySelector("h2");
+           h2.innerHTML = input.value.split("").reverse().join("");
+       }
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <input type="radio" value="one" name="shu" v-model="name"/> 一
+        <input type="radio" value="two" name="shu" v-model="name"/> 二
+        <input type="radio" value="three" name="shu" v-model="name"/> 三
+        <img v-if="name=='one'" src="C:\Users\Administrator\Desktop\捕获.png"/>
+        <img v-else-if="name=='two'" src="http://s6.sinaimg.cn/orignal/4a86e186f13f36bcb7f25" />
+        <img v-else-if="name=='three'" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1575978093138&di=2ef7e94ea8e6029df93917312940a14f&imgtype=0&src=http%3A%2F%2Fe.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2Fb2de9c82d158ccbf509debdd1bd8bc3eb1354137.jpg" />
+        <img v-else src="http://image2.sina.com.cn/ent/d/2005-06-21/U105P28T3D758537F326DT20050621155831.jpg" />
+    </div>
+    <script>
+        var app = new Vue({
+         el:"#app",
+            data:{
+                show:'false',
+                name:""
+            }
+        });
+    </script>
+</body>
+</html>

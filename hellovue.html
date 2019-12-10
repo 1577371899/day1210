@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        请输入内容：<input type="text" v-model="message"/>
+        <!--v-model的作用是将标签的value属性与data中的某一个参数进行双向绑定 -->
+        <h1>{{message}}</h1>
+    </div>
+    <script>
+        var app= new Vue({
+            el:"#app",
+            data:{
+                message:""
+            }
+        });
+    </script>
+</body>
+</html>
